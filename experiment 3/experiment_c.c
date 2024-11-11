@@ -8,10 +8,21 @@ int search(int arr[], int n, int x) {
     return -1;
 }
 
-int main(void) {
-    int arr[] = {2, 3, 4, 10, 40};
-    int x = 4;
-    int n = sizeof(arr) / sizeof(arr[0]);
+int main() {
+    int n, x, i;
+    
+    printf("Enter number of elements in array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    printf("Enter %d elements: ", n);
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    printf("Enter element to search: ");
+    scanf("%d", &x);
+    
     int result = search(arr, n, x);
 
     if (result == -1)
